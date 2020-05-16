@@ -1,0 +1,3 @@
+yarn jar hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -file ./wordcount/mapper-tf.py -mapper ./wordcount/mapper-tf.py -file ./wordcount/reducer-tf-idf.py -reducer ./wordcount/reducer-tf-idf.py -input libros2/* -output pyMapRedLibros2
+hdfs dfs -ls pyMapRedLibros2
+hdfs dfs -cat pyMapRedLibors2/part-00000 | less
